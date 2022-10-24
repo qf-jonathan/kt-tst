@@ -11,7 +11,6 @@ class BlogConfiguration {
     fun databaseInitializer(userRepository: UserRepository,
                             articleRepository: ArticleRepository) =
             ApplicationRunner {
-                print(">> test elements")
                 val juan = userRepository.save(User("juan", "peres", "juarez"))
                 articleRepository.save(Article(
                         title = "Reactor Bismut is out",
